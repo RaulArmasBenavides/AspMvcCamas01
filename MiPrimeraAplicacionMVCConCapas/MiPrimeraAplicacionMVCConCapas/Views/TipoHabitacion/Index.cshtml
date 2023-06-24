@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tipo Habitacion</h2>
+<link href="~/Content/datatable.css" rel="stylesheet" />
+<fieldset class="container mb-4">
+    <legend>Datos de Tipo Habitaciòn</legend>
+    <form id="frmTipoHabitacion" method="post">
+        <div class="row">
+            <div class="mb-3 col-md-5">
+
+                <label>Id Tipo Habitaciòn</label>
+                <input type="text" class="form-control"
+                       name="id" value="0" readonly />
+            </div>
+
+            <div class="mb-3 col-md-7" >
+                <label>Nombre Habitaciòn</label>
+                <input type="text" class="form-control o max-40 min-4"
+                       name="nombre" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class=" mb-3">
+                <label>Descripciòn</label>
+                <input type="text" class="form-control o min-5"
+                       name="descripcion" />
+            </div>
+        </div>
+       
+
+    </form>
+    <button class="btn btn-primary" onclick="GuardarDatos()">Aceptar</button>
+    <button class="btn btn-danger" onclick="Limpiar()">Limpiar</button>
+</fieldset>
+
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control"
+           id="txtnombretipohabitacion"
+           placeholder="Ingrese nombre tipo habitacion"
+          />
+    <button class="btn btn-primary" 
+            onclick="Buscar()"
+            type="button" id="btnnombretipohabitacion">Buscar</button>
+</div>
+<div id="divTabla" >
+
+</div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/datatable.js"></script>
+<script src="~/Scripts/sweetalert.js"></script>
+<script src="~/Scripts/generic.js"></script>
+<script src="~/Scripts/tipohabitacion.js"></script>
+

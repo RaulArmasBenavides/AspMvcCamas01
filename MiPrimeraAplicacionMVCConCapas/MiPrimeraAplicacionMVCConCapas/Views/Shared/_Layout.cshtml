@@ -1,0 +1,139 @@
+﻿@using Capa_Entidad;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+
+    <div style="display:none;position:absolute;top:0px;left:0px;width:100%;
+height:100%;background-image:url(../../img/cargando.gif);background-repeat:no-repeat;
+background-position:center;z-index:100000" id="cargando">
+
+    </div>
+	
+	@{ 
+		PersonaCLS  oPersonaCLS= (PersonaCLS)Session["persona"];
+		List<PaginaCLS> listapaginas = (List<PaginaCLS>)Session["menu"];
+	}
+    
+    <div class="nav-side-menu">
+        <div class="tasi">
+
+            <div class="brand"><img src="@oPersonaCLS.fotobase64" width="150"><!-- /Web-Doktoru --></div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+			<p>Bienvenido : @oPersonaCLS.nombreCompleto</p>
+            <div class="menu-list">
+
+				<ul id="menu-content" class="menu-content collapse out">
+
+					@foreach (PaginaCLS oPaginaCLS in listapaginas)
+					{
+						<li>
+							@Html.ActionLink(@oPaginaCLS.mensaje, @oPaginaCLS.accion, @oPaginaCLS.controlador,
+						   new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+
+
+						</li>
+					}
+
+					<!--<li>
+							@Html.ActionLink("Tipo Habitacion", "Index", "TipoHabitacion",
+						   new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+
+
+						</li>
+						<li>
+							@Html.ActionLink("Cama", "Index", "Cama",
+						   new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+
+						<li>
+							@Html.ActionLink("Marca", "Index", "Marca",
+						  new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+
+						<li>
+							@Html.ActionLink("Producto", "Index", "Producto",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+						<li>
+							@Html.ActionLink("Persona", "Index", "Persona",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+						<li>
+							@Html.ActionLink("Categoria", "Index", "Categoria",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+						<li>
+							@Html.ActionLink("Hotel", "Index", "Hotel",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+						<li>
+							@Html.ActionLink("Habitacion", "Index", "Habitacion",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+						<li>
+							@Html.ActionLink("Tipo usuario", "Index", "TipoUsuario",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>
+						<li>
+							@Html.ActionLink("Pagina", "Index", "Pagina",
+	new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+						</li>-->
+					<li>
+						@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Login",
+new { area = "" }, new { @class = "nav-link js-scroll-trigger" })
+					</li>
+					<!--li data-toggle="collapse" data-target="#new" class="collapsed">
+	  <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+	</li>
+	<ul class="sub-menu collapse" id="new">
+	  <li>New New 1</li>
+	  <li>New New 2</li>
+	  <li>New New 3</li>
+	</ul-->
+				</ul>
+            </div>
+        </div>
+    </div></div>
+    <div  style="margin-left:230px"  >
+        @RenderBody()
+    </div>
+  
+    <input  type="hidden" id="hdfOculto" value="@Url.Content("~")" />
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
+
+ 
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
