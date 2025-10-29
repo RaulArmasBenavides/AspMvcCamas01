@@ -281,7 +281,8 @@ namespace Capa_Datos
                             cmd.CommandType = CommandType.StoredProcedure;
                             cmd.Parameters.AddWithValue("@iidusuario", oUsuarioCLS.iidusuario);
                             cmd.Parameters.AddWithValue("@nombreusuario", oUsuarioCLS.nombreusuario);
-                            cmd.Parameters.AddWithValue("@contra", GenericLH.cifrarCadena(oUsuarioCLS.contra));
+                            cmd.Parameters.AddWithValue("@contra", "123456");
+                            //cmd.Parameters.AddWithValue("@contra", GenericLH.cifrarCadena(oUsuarioCLS.contra));
                             cmd.Parameters.AddWithValue("@iidpersona", oPersonaCLS.iidpersona);
 
 

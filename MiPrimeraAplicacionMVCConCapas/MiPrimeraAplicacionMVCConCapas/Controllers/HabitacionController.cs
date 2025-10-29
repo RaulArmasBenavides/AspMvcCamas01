@@ -1,13 +1,13 @@
 ﻿using Capa_Entidad;
 using Capa_Negocio;
-using MiPrimeraAplicacionMVCConCapas.Filter;
+using BDHotel.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MiPrimeraAplicacionMVCConCapas.Controllers
+namespace BDHotel.Controllers
 {
    
     public class HabitacionController : Controller

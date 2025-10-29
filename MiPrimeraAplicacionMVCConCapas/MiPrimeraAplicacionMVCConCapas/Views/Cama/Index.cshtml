@@ -1,6 +1,6 @@
 ﻿
 @{
-	ViewBag.Title = "Index";
+    ViewBag.Title = "Index";
 }
 
 <h2>Listado Cama</h2>
@@ -13,6 +13,13 @@
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/datatable.js"></script>
 <script src="~/Scripts/sweetalert.js"></script>
+<script>
+    $(function () {
+        $.extend(true, $.fn.dataTable.defaults, {
+            language: { url: "https://cdn.datatables.net/plug-ins/1.13.5/i18n/es-ES.json" }
+        });
+    });
+</script>
 <script src="~/Scripts/generic.js"></script>
 <script src="~/Scripts/cama.js"></script>
 

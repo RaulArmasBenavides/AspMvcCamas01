@@ -8,6 +8,13 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script>
+        $(function () {
+            $.extend(true, $.fn.dataTable.defaults, {
+                language: { url: "https://cdn.datatables.net/plug-ins/1.13.5/i18n/es-ES.json" }
+            });
+        });
+    </script>
 </head>
 <body>
 

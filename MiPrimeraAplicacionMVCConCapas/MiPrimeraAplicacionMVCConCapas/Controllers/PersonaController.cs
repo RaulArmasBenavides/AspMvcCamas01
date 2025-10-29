@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MiPrimeraAplicacionMVCConCapas.Controllers
+namespace BDHotel.Controllers
 {
     public class PersonaController : Controller
     {

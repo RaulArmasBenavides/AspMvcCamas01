@@ -5,7 +5,7 @@ function Login() {
 	var contra = getN("contra");
 	console.log("Test");
 	fetchGet("Login/uspLogin/?usuario=" + nombreusuario + "&contra=" + contra, function (data) {
-
+		console.log(data);
 		if (data.iidusuario == 0) Error("Usuario o contra incorrecto")
 		else {
 			Correcto("Bienvenido");

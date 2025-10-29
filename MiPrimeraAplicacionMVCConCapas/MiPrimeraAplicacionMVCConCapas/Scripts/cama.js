@@ -2,6 +2,7 @@
     listarCama();
 }
 
+
 function listarCama() {
     pintar({
         url: "Cama/listarCama",

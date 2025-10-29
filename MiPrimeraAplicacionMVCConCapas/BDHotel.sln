@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiPrimeraAplicacionMVCConCapas", "MiPrimeraAplicacionMVCConCapas\MiPrimeraAplicacionMVCConCapas.csproj", "{2B2B616C-3C97-436B-8BDE-C69C51182ECC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDHotel", "MiPrimeraAplicacionMVCConCapas\BDHotel.csproj", "{2B2B616C-3C97-436B-8BDE-C69C51182ECC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa Datos", "Capa Datos\Capa Datos.csproj", "{FD88C735-910A-4F3D-B8E4-B01A9146ED78}"
 EndProject

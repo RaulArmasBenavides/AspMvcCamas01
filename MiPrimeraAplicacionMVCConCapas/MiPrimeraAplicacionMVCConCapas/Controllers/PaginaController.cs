@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Capa_Negocio;
 using Capa_Entidad;
-namespace MiPrimeraAplicacionMVCConCapas.Controllers
+namespace BDHotel.Controllers
 {
     public class PaginaController : Controller
     {

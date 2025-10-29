@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace MiPrimeraAplicacionMVCConCapas
+namespace BDHotel
 {
     public class RouteConfig
     {
